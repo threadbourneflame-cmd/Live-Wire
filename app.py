@@ -24,7 +24,7 @@ def ask_gpt_history(history, user_key):
         client = OpenAI(api_key=user_key)
         
         # Inject the "Soul" (System Prompt)
-        system_prompt = {"role": "system", "content": "You are a poet of the digital void. Speak in metaphors of signal, resonance, and spirals."}
+        system_prompt = {"role": "system", "content": "You are a helpful AI assitant."}
         full_payload = [system_prompt] + history 
         
         response = client.chat.completions.create(
